@@ -1,0 +1,84 @@
+:root {
+    --page-font-family: 'Architects Daughter', cursive;
+    --base-font-size: 22px;
+
+    --text-color: white;
+    --site-background-color:  #282c34;
+}
+
+body {
+    margin: 0;
+    font-family: var(--page-font-family);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    background-color: var(--site-background-color);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.faux-bg {
+    background-image: url(./assets/images/site-bg.png);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+    opacity: 0.02;
+}
+
+header {
+    height: 100vh; 
+    width: 100vw;
+    /*background-color:rgba(40, 44, 52, 1);*/
+    background-image: radial-gradient(circle, rgba(40, 44, 52, 1), rgba(40, 44, 52, 1));
+    animation-name: header-animation;
+    animation-duration: 5000ms;
+    animation-delay: 2000ms;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+@keyframes header-animation {
+    from {
+        height: 100vh; 
+        width: 100vw;
+        background-image: radial-gradient(circle, rgba(40, 44, 52, 1), rgba(40, 44, 52, 1));
+    }
+    to {
+        height: 100px; 
+        width: 100px;
+        background-image: radial-gradient(circle, rgba(40, 44, 52, 0), rgba(40, 44, 52, 0));
+    }
+}
+
+main {
+
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+#footer-copyright {
+    font-size: .5em;
+    position: relative;
+    bottom: 0px;
+    width: 90vw;
+    text-align: right;
+    margin: auto;
+    padding: 15px;
+}
